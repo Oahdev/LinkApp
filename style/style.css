@@ -1,0 +1,246 @@
+
+/* home.css */
+
+* {
+  margin: 0;
+  list-style: none;
+  font-family: 'Poppins';
+}
+* a {
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+}
+:root {
+  --primary-color:#202020;
+  --back-color: #f1f1f1;
+  --front-color: white;
+  --active-color: rgb(97, 92, 92);
+  --page-size: 90%;
+  --color-background: #48944891;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--front-color);
+  width: 100%;
+  font-family: Poppins;
+}
+nav {
+  background-color: var(--front-color);
+  width: 100%;
+  padding: 27px 0px;
+}
+nav #logo {
+  font-size: 18px;
+  cursor: default;
+  width: var(--page-size);
+  margin: auto;
+}
+
+nav #logo a {
+  color: var(--primary-color);
+}
+main{
+  position: relative;
+  background-image: url(../img/home.jpg);
+  image-rendering: optimizeSpeed;
+  height: 110vh;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  z-index: 2;
+}
+.main-container{
+  position: absolute;
+    width: 50%;
+    margin: 63px 25%;
+    text-align: center;
+    padding: 27px;
+    border-radius: 9px;
+  box-sizing: border-box;
+  margin-bottom: 27px;
+}
+.main-container input{
+  padding: 12px;
+    width: 70%;
+    border-radius: 5px;
+    border: var(--back-color) 1px solid;
+    outline: none;
+  color: var(--primary-color);
+}
+.main-container button{
+  width: 70%;
+  border-radius: 7px;
+  border: none;
+  padding: 12px;
+  color: var(--front-color);
+  font-weight: 700;
+  margin-bottom: 18px;
+  background-color: var(--primary-color);
+  cursor: pointer;
+}
+
+.main-container button:hover{
+  background-color: var(--active-color);
+    transition-duration: .5s;
+}
+.main-container p , label{
+  color: var(--front-color);
+}
+.main-container a{
+  color: var(--primary-color);
+  margin-left: 12px;
+  cursor: pointer;
+}
+.main-container a:hover{
+  color: var(--active-color);
+  transition: .7s;
+}
+#remember_me_div{
+  width: 70%;
+  text-align: start;
+  margin: auto;
+  padding-right: 9px;
+  margin-bottom: 9px;
+}
+#remember_me_div input{
+  width: fit-content;
+  cursor: pointer;
+  margin: 0;
+}
+#extra_options{
+  width: 50%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  font-size: small;
+}
+#extra_options a{
+  margin: auto;
+}
+#response{
+  margin-top: 18px;
+  /* margin-bottom: 18px; */
+  color: var(--primary-color);
+}
+@media (max-width: 768px) {
+  .main-container{
+    width: 70%;
+    margin: 81px 15%;
+  }
+  #extra_options{
+    display: inline-block;
+    width: 50%;
+    margin: auto;
+  }
+}
+@media (max-width: 425px) {
+  .main-container{
+    width: 100%;
+    margin-left: 0;
+    margin-top: 81px;
+    padding: 0;
+  }
+}
+
+
+.input-div{
+  margin-bottom: 18px;
+}
+.input-div p{
+  text-align: start;
+  margin-left: 15%;
+  color: red;
+  font-size: smaller;
+}
+
+
+
+
+/* footer.css */
+
+footer {
+    bottom: 0;
+    padding: 18px 0;
+    background-color: var(--front-color);
+    font-size: small;
+    color: var(--primary-color);
+    padding-left: 5px;
+}
+#footer-container{
+    min-width: 56%;
+    float: left;
+    display: flex;
+    justify-content: space-between;
+}
+#report_btn{
+    color: var(--primary-color);
+}
+
+
+
+
+/* not_found.css */
+.not-found-main-body{
+  background-image: url(../img/home.jpg);
+  background-size: cover;
+  height: 100vh;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  width: 100%;
+}
+.not_found_body{
+  width: 100%;
+  margin: auto;
+  margin-top: 54px;
+  text-align: center;
+}
+.not_found_body h1{
+  margin: auto;
+  font-size: 54px;
+  color: var(--primary-color);
+}
+.not_found_body footer{
+  margin-top: 70vh;
+  width: 100%;
+  background: transparent;
+  text-align: center;
+}
+.not_found_body footer p{
+  color: var(--primary-color);
+}
+.not_found_body button{
+  padding: 9px 18px;
+  background-color: var(--primary-color);
+  color: var(--front-color);
+  border-radius: 18px;
+  border: none;
+  cursor: pointer;
+}
+.not_found_body button:hover{
+  background-color: var(--active-color);
+  color: var(--front-color);
+  transition: .7s;
+}
+@media (max-width:450px){
+  .not_found_body h1{
+      width: 80%;
+  }
+  #footer-container{
+    width: 63%;
+  }
+}
+
+
+#success-response , #error-response{
+  display: flex;
+  width: 70%;
+  margin: auto;
+  margin-bottom: 18px;
+}
+
+#remember_me_div label{
+  color: var(--active-color);
+}
+

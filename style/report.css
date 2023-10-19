@@ -1,0 +1,35 @@
+body{
+    background-color: var(--front-color);
+    display: grid;
+    flex-direction: column;
+    height: 100vh;
+}
+.container{
+    max-width: 80%;
+    margin: auto;
+    margin-top: 63px;
+}
+label{
+    color: var(--primary-color);
+}
+
+#exit{
+    font-size: 40px;
+    cursor: pointer;
+    width: fit-content;
+}
+
+#submitBtn{
+    outline: none;
+    border-radius: .5rem;
+}
+#submitBtn:hover{
+    background-color: var(--active-color);
+    transition: .5s;
+}
+
+footer{
+    text-align: center;
+    padding: 9px;
+    margin-top: auto;
+}

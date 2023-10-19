@@ -1,0 +1,113 @@
+body{
+    font-style: italic;
+    background-color: var(--front-color);
+}
+.container{
+    width: 50%;
+    margin: auto;
+    padding: 27px;
+    border-radius: 9px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.input-div p , #password_change p{
+    margin-left: 10%;
+}
+.input-div , #password_change p{
+    margin-bottom: 27px;
+}
+input , textarea{
+    padding: 9px;
+    width: 80%;
+    border-radius: 5px;
+    border: 1px var(--primary-color) solid;
+    outline: none;
+    font-size: large;
+}
+h1{
+    text-align: center;
+    margin-bottom: 36px;
+    font-size: 40px;
+}
+button{
+    padding: 18px 45px;
+    border: none;
+    border-radius: 9px;
+    color: var(--front-color);
+    background-color: var(--primary-color);
+    cursor: pointer;
+    font-size: larger;
+}
+button:hover{
+    background-color: var(--active-color);
+    transition: .5s;
+}
+label ,h2{
+    float: left;
+    margin-left: 9%;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 9px;
+    color: var(--primary-color);
+}
+h2{
+    cursor: pointer;
+}
+#password_change{
+    display: none;
+}
+#edit_back{
+    text-align: start;
+}
+#edit_back_button{
+    font-size: 54px;
+    color: var(--primary-color);
+}
+@media (max-width: 768px){
+    .container{
+        width: 80%;
+        margin: 0 10%;
+    }
+}
+@media (max-width: 425px) {
+    .container{
+      width: 100%;
+      margin-left: 0;
+      padding: 0;
+    }
+    #edit_back{
+        padding-left: 5%;
+    }
+}
+#Img-Preview{
+    height: fit-content;
+    width: fit-content;
+    margin: auto;
+    text-align: center;
+}
+#Img-Preview label{
+    position: absolute;
+    /* float: right; */
+    margin-top: -36px;
+    margin-left: 42px;
+}
+#edit-preview-image{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 2px solid var(--primary-color);
+}
+#pImage-response{
+    margin: auto;
+    text-align: center;
+}
+#edit-profile-image-pen{
+    width: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+#editBtn{
+    margin: auto;
+    margin-top: 9px;
+    text-align: center;
+}
