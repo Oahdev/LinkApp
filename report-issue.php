@@ -4,7 +4,7 @@ require "./header.php";
 
 ?>
 
-<link rel="stylesheet" href="https://oah-linkapp.000webhostapp.com/style/report.css">
+<link rel="stylesheet" href="./style/report.css">
 <body>
     <div class="container">
         <div>

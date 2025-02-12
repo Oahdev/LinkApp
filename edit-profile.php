@@ -16,7 +16,7 @@ if(isset($_SESSION["uid"])){
 require "./header.php";
 ?>
 
-<link rel="stylesheet" href="https://oah-linkapp.000webhostapp.com/style/edit-profile.css">
+<link rel="stylesheet" href="/style/edit-profile.css">
 <body>
     <div class="container">
     <!-- <iframe width="480" height="360" src="https://www.youtube.com/embed/A185HevwQV0" title="Semena" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
@@ -72,4 +72,4 @@ require "./header.php";
 <?php 
 require "./footer.php";
 ?>
-<script src="https://oah-linkapp.000webhostapp.com/js/edit-profile.js"></script>
+<script src="./js/edit-profile.js"></script>

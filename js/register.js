@@ -1,5 +1,12 @@
 $(document).ready(function(){
-    
+    const homeUrl = () => {
+        const protocol = window.location.protocol;
+        const hostname = window.location.hostname;
+        const port = window.location.port;
+        const homeUrl = port ? `${protocol}//${hostname}:${port}/` : `${protocol}//${hostname}/`;
+        return homeUrl
+    }
+
     $("#register").on("submit",function(e){
         e.preventDefault();
         $.ajax({
@@ -25,7 +32,8 @@ $(document).ready(function(){
                             '<div>'+response[1]+'</div>'+
                         '</div>'
                     );
-                    location.href = "https://oah-linkapp.000webhostapp.com/user/"+response[3];
+                    const redirectUrl = `${homeUrl()}user/${response[3]}`;
+                    location.href = redirectUrl;                    
                 }
             },
             complete: function(){

@@ -9,10 +9,10 @@
     <title>LinkApp :: <?php echo $page_title?></title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
 
-    <link rel="stylesheet" href="https://oah-linkapp.000webhostapp.com/style/style.css">
+    <link rel="stylesheet" href="/style/style.css">
 
 
-    <script src="https://oah-linkapp.000webhostapp.com/js/jquery.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
 
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">

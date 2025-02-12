@@ -1,6 +1,15 @@
+const homeUrl = () => {
+    const protocol = window.location.protocol;
+    const hostname = window.location.hostname;
+    const port = window.location.port;
+    const homeUrl = port ? `${protocol}//${hostname}:${port}/` : `${protocol}//${hostname}/`;
+    return homeUrl
+}
+
 $(".backBtn").on("click",function(){
     var uname = $("#uname").val();
-    location.href = "https://oah-linkapp.000webhostapp.com/user/"+uname;
+    const redirectUrl = `${homeUrl()}user/${uname}`;
+    location.href = redirectUrl;   
 });
 $("#openPwdBtn").on("click",function(){
     $("#password_change").slideToggle();
@@ -28,14 +37,19 @@ $("document").ready(function(){
                         $("#pImage-response").html(response.body[0]).fadeIn(400).fadeOut(3000);
                         $("#pImage-response").css("color","green");
                         $("#pImage").css("border-color","green");
-                        $("#edit-preview-image").attr("src","https://oah-linkapp.000webhostapp.com/img/"+response.body[1]);
+                        $("#edit-preview-image").attr("src","./img/"+response.body[1]);
                     }else{
                         $("#pImage-response").html(response.body).fadeIn(400).fadeOut(3000);
                         $("#pImage-response").css("color","red");
                         $("#pImage").css("border-color","red");
                     }
                     
+                },
+                error: function(err){
+                    console.error(err);
+                    
                 }
+                
             });
 
         }

@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="https://oah-linkapp.000webhostapp.com/style/user.css">
+<link rel="stylesheet" href="/style/user.css">
 <?php 
 $user_details = DB::query("SELECT profile_image,bio FROM linkrs WHERE uname = :uname",array(":uname"=>$username));
 $profile_image = $user_details[0]["profile_image"];
@@ -39,3 +39,8 @@ $user_bio = $user_details[0]["bio"];
         </div>
     </div>
 </body>
+<script>
+    $(document).on("click","#menuBtn",function(){
+        $("#navAccountDrop").slideToggle();
+    })
+</script>

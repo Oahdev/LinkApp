@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="https://oah-linkapp.000webhostapp.com/style/style.css">
+<link rel="stylesheet" href="./style/style.css">
 <style>
     body{
         display: grid;
@@ -12,8 +12,8 @@
     <div class="not_found_body">
         <h1><?php echo $username;?> not found</h1>
         <div>
-            <a href="https://oah-linkapp.000webhostapp.com/"><button>Login</button></a>
-            <a href="https://oah-linkapp.000webhostapp.com/register"><button>Register</button></a>
+            <a href="./"><button>Login</button></a>
+            <a href="./register"><button>Register</button></a>
         </div>
     </div>
 

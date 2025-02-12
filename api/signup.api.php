@@ -53,7 +53,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             $uname = str_replace("/","",$uname);
             $uname = str_replace("\\","",$uname);
 	        $uname = str_replace(" ","",$uname); 
-            DB::query("INSERT INTO linkrs(session_token,uname,email,pwd,profile_image,bio,date) VALUES(
+            DB::query("INSERT INTO linkrs(session_token,uname,email,pwd,profile_image,bio,date_created) VALUES(
                 :session_token,
                 :uname,
                 :email,

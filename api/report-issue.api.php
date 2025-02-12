@@ -14,7 +14,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         DB::query("INSERT INTO issues(
             email,
             issue,
-            date
+            date_created
         ) 
         VALUES(
             :email,

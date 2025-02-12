@@ -53,7 +53,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         user_id,
                         link_title,
                         link_address,
-                        date
+                        date_created
                     ) VALUES(
                         :user_id,
                         :link_title,

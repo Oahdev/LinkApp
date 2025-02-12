@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="https://oah-linkapp.000webhostapp.com/style/user.css">
+<link rel="stylesheet" href="/style/user.css">
 <?php 
 $user_details = DB::query("SELECT profile_image,bio FROM linkrs WHERE uname = :uname",array(":uname"=>$username));
 $profile_image = $user_details[0]["profile_image"];
@@ -52,7 +52,7 @@ $user_bio = $user_details[0]["bio"];
 
                 <div id="link_buttons">
                     <button type="submit" name="add_submit" id="add_link_button">add</button>
-                    <button type="submit" id="cancel-edit-button">cancel</button>
+                    <button id="cancel-edit-button">cancel</button>
                 </div>
             </form>
         </div>
@@ -64,4 +64,4 @@ $user_bio = $user_details[0]["bio"];
         </div>
     </div>
 </body>
-<script src="https://oah-linkapp.000webhostapp.com/js/active-user.js"></script>
+<script src="/js/active-user.js"></script>

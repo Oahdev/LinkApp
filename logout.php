@@ -5,6 +5,6 @@ $uname = (DB::query("SELECT uname FROM linkrs WHERE id = :uid",array(":uid"=>$_S
 unset($_SESSION["linkAppToken"]);
 unset($_SESSION["uid"]);
 setcookie("linkAppToken",false,time()-3600,"/");
-header("location: https://oah-linkapp.000webhostapp.com/user/$uname");
+header("location: ./user/$uname");
 
 ?>

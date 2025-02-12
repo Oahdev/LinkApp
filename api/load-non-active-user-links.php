@@ -1,7 +1,7 @@
 <?php
 
 $uid = (DB::query("SELECT id FROM linkrs WHERE uname = :uname",array(":uname"=>$username)))[0]["id"];
-$user_data = DB::query("SELECT link_id,link_title,link_address FROM links WHERE user_id = :uid ORDER BY date DESC",array(":uid"=>$uid));
+$user_data = DB::query("SELECT link_id,link_title,link_address FROM links WHERE user_id = :uid ORDER BY date_created DESC",array(":uid"=>$uid));
 $links = "";
 foreach ($user_data as $key => $value) {
     $links .= "

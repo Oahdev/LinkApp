@@ -1,19 +1,34 @@
-function load_active_user_links(){
+function load_active_user_links() {
+    
     $.ajax({
         type: "GET",
         url: "../api/load-active-user-links.php",
-        success: function (response) {
-            var response = JSON.parse(response);
-            if(response.status == 1){
-                $(".user-list").html(response.body);
-            }else{
-                $(".user-list").html(response.body);
+        success: function(response) {
+            try {
+                // Parse the response only if it's a string (for safety)
+                if (typeof response === 'string') {
+                    response = JSON.parse(response);
+                }
 
+                // Handle the response based on status
+                if (response.status == 1) {
+                    $(".user-list").html(response.body);
+                } else {
+                    $(".user-list").html(response.body);
+                }
+
+            } catch (e) {
+                console.error('Error parsing response:', e);
             }
-            
+        },
+        error: function(err) {
+            console.error('AJAX Error:', err);
+            // You might want to show a message to the user in case of an error.
+            $(".user-list").html('<div class="error">Failed to load user links. Please try again later.</div>');
         }
     });
 }
+
 
 function delete_link(val){
     $.ajax({
@@ -41,6 +56,13 @@ function delete_link(val){
         }
     });
 }
+
+$(document).on("click","#menuBtn",function(){
+    $("#navAccountDrop").slideToggle();
+})
+$(document).on("click","#logout_button",function(){
+    $("#logout_option").slideToggle();
+})
 
 function edit_link(val){
     $("#link_header").val($("#"+val+" a p").html());
@@ -99,6 +121,9 @@ $("document").ready(function(){
             complete: function(){
                 $("#add_link_button").removeAttr("disabled");
                 $("#cancel-edit-button").removeAttr("disabled");
+            },
+            error: function(err){
+                console.error(err);
             }
         });
     })
