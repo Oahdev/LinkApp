@@ -29,6 +29,28 @@ function load_active_user_links() {
     });
 }
 
+const homeUrl = () => {
+    const protocol = window.location.protocol;
+    const hostname = window.location.hostname;
+    const port = window.location.port;
+    const homeUrl = port ? `${protocol}//${hostname}:${port}/` : `${protocol}//${hostname}/`;
+    return homeUrl
+}
+
+$(document).on("click",".copy-url-btn",function(){
+    let thisUser = $(this).data('username');
+    let userUrl = `${homeUrl()}user/${thisUser}`;
+    console.log(userUrl);
+    navigator.clipboard.writeText(userUrl);
+
+    $(this).text("copied!");
+    const self = $(this);
+    setTimeout(() => {
+        self.text('copy profile url');
+    }, 2000);
+
+})
+
 
 function delete_link(val){
     $.ajax({

@@ -39,6 +39,9 @@ $user_bio = $user_details[0]["bio"];
                 <p style="color: var(--primary-color);"><?php echo $user_bio;?></p>
             </div>
             <div id="top_options">
+                <button class="copy-url-btn" title="Copy url to clipboard" data-username="<?php echo $username;?>">
+                    copy profile url
+                </button>
                 <a href="../edit-profile" id="edit_profile_button">edit profile</a>
             </div>
         </div>

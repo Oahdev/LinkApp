@@ -36,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
                 $response["body"] = $links;
             } else {
                 $response["status"] = false;
-                $response["body"] = "No links found for this user";
+                $response["body"] = "No links found";
             }
         } else {
             $response["status"] = false;
